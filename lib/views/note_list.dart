@@ -50,7 +50,12 @@ class NoteList extends StatelessWidget {
                   builder: (_) => NoteDelete()
                 );
                 return result;
-              }, 
+              },
+              background: Container(
+                color: Colors.red,
+                padding: EdgeInsets.only(left: 16),
+                child: Align(child: Icon(Icons.delete, color: Colors.white)),
+              ), 
               child: ListTile(
                     title: Text(notes[index].noteTitle,
                     style: TextStyle(color: Theme.of(context).primaryColor)),
